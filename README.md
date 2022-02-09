@@ -23,9 +23,9 @@ Grateful or outraged users leave text reviews for the titles and give the title 
     ```
 
 ### Authors
-Халяпин Лев(Me)
-Швейников Андрей(https://github.com/xxxRichiexxx)
-Юркин Максим(https://github.com/Zoltrix88)
+- Халяпин Лев(Me)
+- Швейников Андрей(https://github.com/xxxRichiexxx)
+- Юркин Максим(https://github.com/Zoltrix88)
 
 
 ***
