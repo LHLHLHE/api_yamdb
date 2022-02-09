@@ -27,9 +27,9 @@ api_yamdb
 
 
 ### Авторы
-Халяпин Лев(Я)
-Швейников Андрей(https://github.com/xxxRichiexxx)
-Юркин Максим(https://github.com/Zoltrix88)
+- Халяпин Лев(Я)
+- Швейников Андрей(https://github.com/xxxRichiexxx)
+- Юркин Максим(https://github.com/Zoltrix88)
 
 
 ***
