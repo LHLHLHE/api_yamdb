@@ -103,7 +103,7 @@ class TitleGetSerializer(serializers.ModelSerializer):
     """
     genre = GenreSerializer(many=True)
     category = CategorySerializer()
-    rating = serializers.SerializerMethodField(read_only=True)
+    rating = serializers.IntegerField()
 
     class Meta:
         model = Title
@@ -114,11 +114,8 @@ class TitleGetSerializer(serializers.ModelSerializer):
             'year',
             'description',
             'genre',
-            'category')
-
-    def get_rating(self, obj):
-        """Вычисляем средний рейтинг для произведения."""
-        return obj.reviews__score__avg
+            'category',
+            'rating')
 
 
 class TitlePostSerializer(serializers.ModelSerializer):
