@@ -163,7 +163,7 @@ class TitlesViewSet(viewsets.ModelViewSet):
     - обновляет информацию о произведении
     - удаляет произведение
     """
-    queryset = Title.objects.annotate(Avg('reviews__score'))
+    queryset = Title.objects.annotate(rating=Avg('reviews__score'))
     permission_classes = (AdminPermission | ReadOnlyPermission,)
     filter_backends = (DjangoFilterBackend,)
     filterset_class = TitlesFilter
