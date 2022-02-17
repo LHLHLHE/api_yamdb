@@ -2,8 +2,19 @@ import datetime as dt
 
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
+from django.core.exceptions import ValidationError
 
 from users.models import CustomUser
+
+
+def validate_year(self, value):
+    """
+    Год выпуска произведения не может быть больше текущего.
+    """
+    if value > dt.datetime.now().year:
+        raise ValidationError(
+            'Год выпуска превышает текущий!')
+    return value
 
 
 class Category(models.Model):
@@ -44,11 +55,11 @@ class Title(models.Model):
     """Модель произведений."""
     name = models.TextField(verbose_name='Название')
     year = models.IntegerField(
-        verbose_name='Год выпуска',
-        validators=[
-            MaxValueValidator(dt.datetime.now().year)
-        ])
-    description = models.TextField(blank=True, verbose_name='Описание')
+        validators=[validate_year],
+        verbose_name='Год выпуска')
+    description = models.TextField(
+        blank=True,
+        verbose_name='Описание')
     genre = models.ManyToManyField(
         Genre,
         through='GenreTitle',
