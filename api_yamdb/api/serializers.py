@@ -129,13 +129,21 @@ class TitlePostSerializer(serializers.ModelSerializer):
     category = serializers.SlugRelatedField(
         slug_field='slug',
         queryset=Category.objects.all())
-    year = serializers.IntegerField(
-        validators=[MaxValueValidator(dt.datetime.now().year)])
+    year = serializers.IntegerField()
 
     class Meta:
         model = Title
         fields = '__all__'
         extra_kwargs = {'description': {'required': False}}
+
+    def validate_year(self, value):
+        """
+        Год выпуска произведения не может быть больше текущего.
+        """
+        if value > dt.datetime.now().year:
+            raise serializers.ValidationError(
+                'Год выпуска превышает текущий!')
+        return value
 
 
 class ReviewSerializer(serializers.ModelSerializer):
