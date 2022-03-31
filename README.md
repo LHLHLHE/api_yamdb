@@ -44,7 +44,7 @@ urllib3==1.26.8
 ```
 
 ### Technologies
-- Python 3.9.7
+- Python 3.9
 - Django 2.2.16
 - Djangorestframework 3.12.4
 - Redoc
