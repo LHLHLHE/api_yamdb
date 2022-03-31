@@ -5,12 +5,6 @@ The titles themselves are not stored in YaMDb, you can't watch a movie or listen
 A title can be assigned a genre from the preset list (for example, "Fairy Tale", "Rock" or "Arthouse"). Only the administrator can create new genres.
 Grateful or outraged users leave text reviews for the titles and give the title a rating in the range from one to ten (an integer); an average rating of the title is formed from user ratings — a rating (an integer). The user can leave only one review for one title.
 
-### Technologies
-- Python 3.9.7
-- Django 2.2.16
-- Djangorestframework 3.12.4
-- Redoc
-
 ### Launching a project in dev mode
 - Install and activate the virtual environment
 - Install dependencies from the file requirements.txt
@@ -21,6 +15,39 @@ Grateful or outraged users leave text reviews for the titles and give the title 
     ```
     python manage.py runserver
     ```
+
+### Requirements
+```
+attrs==21.4.0
+certifi==2021.10.8
+charset-normalizer==2.0.11
+Django==2.2.16
+django-filter==21.1
+djangorestframework==3.12.4
+djangorestframework-simplejwt==5.0.0
+idna==3.3
+iniconfig==1.1.1
+packaging==21.3
+pluggy==0.13.1
+py==1.11.0
+PyJWT==2.1.0
+pyparsing==3.0.7
+pytest==6.2.4
+pytest-django==4.4.0
+pytest-pythonpath==0.7.3
+python-dotenv==0.19.2
+pytz==2021.3
+requests==2.26.0
+sqlparse==0.4.2
+toml==0.10.2
+urllib3==1.26.8
+```
+
+### Technologies
+- Python 3.9.7
+- Django 2.2.16
+- Djangorestframework 3.12.4
+- Redoc
 
 ### Authors
 - Халяпин Лев(Me)
