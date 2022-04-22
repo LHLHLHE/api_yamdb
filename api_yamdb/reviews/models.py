@@ -7,7 +7,7 @@ from django.core.exceptions import ValidationError
 from users.models import CustomUser
 
 
-def validate_year(self, value):
+def validate_year(value):
     """
     Год выпуска произведения не может быть больше текущего.
     """
